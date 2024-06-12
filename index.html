@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  
+  
+  <style>
+    @layer utilities{
+      .header{
+        background-color: #724b7e;
+        color: ##eee2f2;
+      }
+      .searchBar{
+        background-color:#fbf8fc;
+      }
+      #products-container{
+        background-color:#f5eff8;
+        display:grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 20px;
+      }
+      .category{
+        color: #CAAAD6;
+      }
+      .product-img{
+        border: 2px solid #CAAAD6;
+        display:none;
+      }
+      .ratings-cont{
+        display:
+      }
+      .ratings-cont #star-rating{
+        color: #402447;
+      }
+      .cart .addToCart{
+        background-color: #b081c1!important;
+      }
+      .cart .addToCart:hover{
+        background-color: #9f6cb1;
+      }
+      .pdt{
+        animation: fade-in 0.7s ease-in forwards;
+      }
+      .footer{
+        background-color: #9f6cb1;
+      }
+      
+      @keyframes fade-in{
+        from{
+          transform: translateY(50px);
+          opacity:0;
+        }
+        to{
+          transform: translateY(0);
+          opacity:1;
+        }
+      }
+    }
+  </style>
+  <title>
+    Ecommerce products catalog
+  </title>
+</head>
+
+<body>
+  <header class="header w-screen flex flex-col items-stretch justify-between p-5 gap-y-5 shadow-md text-xl md:flex-row">
+    
+    <div class="md:w-1/2 flex gap-x-2 w-full items-center justify-start">
+      <h4 class="uppercase text-white text-2xl">
+        Sort by:
+      </h4>
+      <select name="sorting" id="sorting" class ="outline-none p-3  rounded-md focus:outline-none">
+        <option value="default">
+          Latest (Default)
+        </option>
+        <option value="price">
+          Price <span>icon</span>
+        </option>
+        <option value="best-selling">
+         Best selling
+        </option>
+      </select>
+    </div>
+    <div class="md:w-1/2 flex ">
+        <input class="w-full p-2 rounded focus:outline-none searchBar" type="search" placeholder="Search...." id="search">
+    </div>
+
+  </header>
+  <maim>
+    <div class="p-8 md:grid-cols-2" id="products-container">
+      
+    </div>
+  </maim>
+  <footer class="h-20 flex items-center justify-center  footer">
+    <h1 class="text-xl text-white font-bold">
+      Made with love (❤️) by Abosi Godwin
+    </h1>
+  </footer>
+
+  <script src="scripts/index.js" type="module"></script>
+</body>
+
+</html>
