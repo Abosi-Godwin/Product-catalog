@@ -16,7 +16,7 @@ const apiCaller = async url => {
 
 /* fetch the product through API*/
 const getProducts = async () => {
-  allProducts = [...await apiCaller("https://fakestoreapi.com/products")];
+  allProducts = [...(await apiCaller("https://fakestoreapi.com/products"))];
   updateProductsCatalogue(allProducts, "default");
 }
 getProducts();
